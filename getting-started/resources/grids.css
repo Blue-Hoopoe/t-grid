@@ -1,0 +1,18 @@
+.t-grid {
+  position: relative; }
+
+.t-col {
+  position: relative;
+  padding: .5rem;
+  background-color: #5ba0e7;
+  color: #fff; }
+  .t-col:nth-of-type(even) {
+    background-color: #45baf6; }
+  .t-col > .t-grid .t-col {
+    background-color: rgba(0, 0, 0, 0.15); }
+
+@media (max-width: 1023px) {
+  .os-window {
+    margin: 2rem 0; } }
+
+/*# sourceMappingURL=grids.css.map */

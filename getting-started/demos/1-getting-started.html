@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>t-grid | 1. Getting started</title>
+    <link rel="icon" href="../resources/logo_256.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-float.css">
+    <link rel="stylesheet" type="text/css" href="../resources/style.css">
+    <link rel="stylesheet" type="text/css" href="../resources/grids.css">
+    <link rel="stylesheet" type="text/css" href="../../t-grid.css">
+</head>
+
+<body>
+
+    <header class="gradient-blue">
+        <div class="row text-center">
+            <h3 class="columns small-12  space-bottom-small">
+                <a href="https://github.com/Blue-Hoopoe" target="_blank">
+                    <img draggable="false" class="logo-large" style="margin-top: -10px" src="../resources/logo-transparent.svg" alt="Blue-Hoopoe">
+                </a>
+                <span>1. Getting started</span>
+            </h3>
+        </div>
+    </header>
+
+    <div class="row">
+        <section class="columns small-12">
+            <header>
+                <h3>1.1 Simple one third grid</h3>
+            </header>
+            <div class="row">
+                <div class="columns large-text-justify">
+                    <p>To create simple one third grid all you need to do is define <span class="attr-val">t-grid</span>, one <span class="attr-val">t-row</span> and insert three <span class="attr-val">t-col t-xxs-4</span> columns inside them.</p>
+                </div>
+                <div class="columns large-6 text-center">
+
+                    <!-- t-grid code 1.1 starts here -->
+
+                    <div class="t-grid">
+                        <div class="t-row">
+                            <div class="t-col t-xxs-4">
+                                Hello! Me and my sibling take 1/3 of this row.
+                            </div>
+                            <div class="t-col t-xxs-4">
+                                Unless you shrink us!
+                            </div>
+                            <div class="t-col t-xxs-4">
+                                Then we will automatically adjust.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- t-grid code 1.1 ends here -->
+
+                </div>
+                <div class="columns large-6">
+                    <div class="os-window spacer-top">
+                        <div class="header gradient-blue">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="content">
+                            <pre><code>&lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid</span>&quot;</span></span>&gt;
+    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xxs-4</span>&quot;</span></span>&gt;
+            Hello! Me and my sibling take 1/3 of this row.
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xxs-4</span>&quot;</span></span>&gt;
+            Unless you shrink us!
+            &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xxs-4</span>&quot;</span></span>&gt;
+            Then we will automatically adjust.
+        &lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header>
+                <h3>1.2 Auto columns sizes</h3>
+            </header>
+            <div class="row">
+                <div class="columns large-text-justify">
+                    <p>In contrast to float-grid, when t-grid is displaying as a table, its columns are being auto sized. You can force auto sizes by adding <span class="attr-val">t-{breakpoint}-auto</span> class or by just ommitting the <span class="attr-val">t-{breakpoint}-{size}</span> classes.</p>
+                </div>
+                <div class="columns large-6 text-center">
+
+                    <!-- t-grid code 1.2 starts here -->
+
+                    <div class="t-grid">
+                        <div class="t-row">
+                            <div class="t-col t-xxs-6">
+                                I'm always taking 50% of the space.
+                            </div>
+                            <div class="t-col t-xxs-auto">
+                                And I take as much space as I can.
+                            </div>
+                            <div class="t-col">
+                                So do I!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- t-grid code 1.2 ends here -->
+
+                </div>
+                <div class="columns large-6">
+                    <div class="os-window spacer-top">
+                        <div class="header gradient-blue">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="content">
+                            <pre><code>&lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid</span>&quot;</span></span>&gt;
+    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xxs-6</span>&quot;</span></span>&gt;
+            I'm always taking 50% of the space.
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xxs-auto</span>&quot;</span></span>&gt;
+            And I take as much space as I can.
+            &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col</span>&quot;</span></span>&gt;
+            So do I!
+        &lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <header>
+                <h3>1.3 Different column sizes at different breakpoints</h3>
+            </header>
+            <div class="row">
+                <div class="columns large-text-justify">
+                    <p>Just like in a float-grids, you can force column size you want. By default, t-grid has twelve columns in a row and five breakpoints, so just use them however you want!</p>
+                </div>
+                <div class="columns large-6 text-center">
+
+                    <!-- t-grid code 1.3 starts here -->
+
+                    <div class="t-grid">
+                        <div class="t-row">
+                            <div class="t-col t-xs-5 t-md-6">
+                                Just resize us!
+                            </div>
+                            <div class="t-col t-xs-2 t-md-3">
+                                And see what happen...
+                            </div>
+                            <div class="t-col t-xs-5 t-md-3">
+                                ...and when happen!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- t-grid code 1.3 ends here -->
+
+                </div>
+                <div class="columns large-6">
+                    <div class="os-window spacer-top">
+                        <div class="header gradient-blue">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="content">
+                            <pre><code>&lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid</span>&quot;</span></span>&gt;
+    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xs-5 t-md-6</span>&quot;</span></span>&gt;
+            Just resize us!
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xs-2 t-md-3</span>&quot;</span></span>&gt;
+            And see what happen...
+            &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xs-5 t-md-3</span>&quot;</span></span>&gt;
+            ...and when happen!
+        &lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer class="row">
+        <div class="columns">
+            <a href="../index.html" class="fancy-button ">
+                <i class="material-icons">&#xE314;</i>
+                Back
+            </a>
+            <a href="2-grid-breakpoints.html" class="fancy-button float-right">
+                <i class="material-icons">&#xE315;</i>
+                Next
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>t-grid | 3. Alignment</title>
+    <link rel="icon" href="../resources/logo_256.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-float.css">
+    <link rel="stylesheet" type="text/css" href="../resources/style.css">
+    <link rel="stylesheet" type="text/css" href="../resources/grids.css">
+    <link rel="stylesheet" type="text/css" href="../../t-grid.css">
+</head>
+
+<body>
+
+    <header class="gradient-blue">
+        <div class="row text-center">
+            <h3 class="columns small-12  space-bottom-small">
+                <a href="https://github.com/Blue-Hoopoe" target="_blank">
+                    <img draggable="false" class="logo-large" style="margin-top: -10px" src="../resources/logo-transparent.svg" alt="Blue-Hoopoe">
+                </a>
+                <span>3. Alignment</span>
+            </h3>
+        </div>
+    </header>
+
+    <div class="row">
+        <section class="columns small-12">
+            <header>
+                <h3>3.1 Grids alignment</h3>
+            </header>
+            <div class="row">
+                <div class="columns large-text-justify">
+                    <p>One of the pros of t-grid is ability to align. There are three options: you can align content to top, to middle and to the bottom. You can apply alignments by adding class to a whole grid.</p>
+                </div>
+                <div class="columns large-6 text-center">
+
+                    <!-- t-grid code 3.1 starts here -->
+
+                    <div class="t-grid t-break-sm t-top">
+                        <div class="t-row">
+                            <div class="t-col">
+                                I'm up.
+                                <br/> And down.
+                                <br/> I take a lot of space!
+                            </div>
+                            <div class="t-col">
+                                But we will always be on top!
+                            </div>
+                            <div class="t-col">
+                                That's right, me too!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- t-grid code 3.1 ends here -->
+
+                </div>
+                <div class="columns large-6">
+                    <div class="os-window spacer-top">
+                        <div class="header gradient-blue">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="content">
+                            <pre><code>&lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid t-break-sm t-top</span>&quot;</span></span>&gt;
+    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col</span>&quot;</span></span>&gt;
+            I'm up.
+            &lt;<span class="tag">br/</span>&gt; And down.
+            &lt;<span class="tag">br/</span>&gt; I take a lot of space!
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col</span>&quot;</span></span>&gt;
+            But we will always be on top!
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col</span>&quot;</span></span>&gt;
+            That's right, me too!
+        &lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header>
+                <h3>3.2 Single cells alignment</h3>
+            </header>
+            <div class="row">
+                <div class="columns large-text-justify">
+                    <p>By default, all grids are aligned to the middle. You can change just one cell alignment by adding right classes.</p>
+                </div>
+                <div class="columns large-6 text-center">
+
+                    <!-- t-grid code 3.2 starts here -->
+
+                    <div class="t-grid t-break-sm">
+                        <div class="t-row">
+                            <div class="t-col">
+                                Look,
+                                <br/> by default I will be always
+                                <br/> in the middle.
+                            </div>
+                            <div class="t-col t-bottom">
+                                But I want to stick to the bottom.
+                            </div>
+                            <div class="t-col t-top">
+                                And I don't.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- t-grid code 3.2 ends here -->
+
+                </div>
+                <div class="columns large-6">
+                        <div class="os-window spacer-top">
+                            <div class="header gradient-blue">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <div class="content">
+                                <pre><code>&lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid t-break-sm</span>&quot;</span></span>&gt;
+    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col</span>&quot;</span></span>&gt;
+            Look,
+            &lt;<span class="tag">br/</span>&gt; by default I will be always
+            &lt;<span class="tag">br/</span>&gt; in the middle.
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-bottom</span>&quot;</span></span>&gt;
+            But I want to stick to the bottom.
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-top</span>&quot;</span></span>&gt;
+            And I don't.
+        &lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+    </div>
+
+    <footer class="row">
+        <div class="columns">
+            <a href="2-grid-breakpoints.html" class="fancy-button ">
+                <i class="material-icons">&#xE314;</i>
+                Back
+            </a>
+            <a href="4-nesting.html" class="fancy-button float-right">
+                <i class="material-icons">&#xE315;</i>
+                Next
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

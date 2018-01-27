@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>t-grid | 4. Nesting</title>
+    <link rel="icon" href="../resources/logo_256.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-float.css">
+    <link rel="stylesheet" type="text/css" href="../resources/style.css">
+    <link rel="stylesheet" type="text/css" href="../resources/grids.css">
+    <link rel="stylesheet" type="text/css" href="../../t-grid.css">
+    <script src="http://code.jquery.com/jquery-1.x-git.js"></script>
+    <script src="../../t-grid.js"></script>
+</head>
+
+<body>
+
+    <header class="gradient-blue">
+        <div class="row text-center">
+            <h3 class="columns small-12  space-bottom-small">
+                <a href="https://github.com/Blue-Hoopoe" target="_blank">
+                    <img draggable="false" class="logo-large" style="margin-top: -10px" src="../resources/logo-transparent.svg" alt="Blue-Hoopoe">
+                </a>
+                <span>4. Nesting</span>
+            </h3>
+        </div>
+    </header>
+
+    <div class="row">
+        <section class="columns small-12">
+            <header>
+                <h3>4.1 Nesting without filling</h3>
+            </header>
+            <div class="row">
+                <div class="columns large-text-justify">
+                    <p>T-grid allows you to create nested grids. By default however, nested grids will not fill they parent.</p>
+                </div>
+                <div class="columns large-6 text-center">
+
+                    <!-- t-grid code 3.1 starts here -->
+
+                    <div class="t-grid t-break-sm">
+                        <div class="t-row">
+                            <div class="t-col t-sm-6">
+                                <div class="t-grid t-break-sm">
+                                    <div class="t-row">
+                                        <div class="t-col t-xs-6">We are nested!</div>
+                                    </div>
+                                    <div class="t-row">
+                                        <div class="t-col t-xs-6">But we don't fill our parent.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="t-col t-sm-6">
+                                I<br/>
+                                am<br/>
+                                really<br/>
+                                height<br/>
+                                cell.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- t-grid code 3.1 ends here -->
+
+                </div>
+                <div class="columns large-6">
+                    <div class="os-window spacer-top">
+                        <div class="header gradient-blue">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="content">
+                            <pre><code>&lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid t-break-sm</span>&quot;</span></span>&gt;
+    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-sm-6</span>&quot;</span></span>&gt;
+            &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid t-break-sm</span>&quot;</span></span>&gt;
+                &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+                    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xs-6</span>&quot;</span></span>&gt;
+                        We are nested!
+                    &lt;/<span class="tag">div</span>&gt;
+                &lt;/<span class="tag">div</span>&gt;
+                &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+                    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xs-6</span>&quot;</span></span>&gt;
+                        But we don't fill our parent.
+                    &lt;/<span class="tag">div</span>&gt;
+                &lt;/<span class="tag">div</span>&gt;
+            &lt;/<span class="tag">div</span>&gt;
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-sm-6</span>&quot;</span></span>&gt;
+            I&lt;<span class="tag">br/</span>&gt;
+            am&lt;<span class="tag">br/</span>&gt;
+            really&lt;<span class="tag">br/</span>&gt;
+            height&lt;<span class="tag">br/</span>&gt;
+            cell.
+        &lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <header>
+                <h3>4.1 Filled nesting</h3>
+            </header>
+            <div class="row">
+                <div class="columns large-text-justify">
+                    <p>To force filled grids you must provide jQuery, t-grid.js file and create an isntance of a <span class="js">tGrid</span> class just before body ending tag. For grid that should be nested, you must add <span class="attr-val">t-fill</span> class.</p>
+                </div>
+                <div class="columns large-6 text-center">
+
+                    <!-- t-grid code 3.1 starts here -->
+
+                    <div class="t-grid t-break-sm">
+                        <div class="t-row">
+                            <div class="t-col t-sm-6">
+                                <div class="t-grid t-break-sm t-fill">
+                                    <div class="t-row">
+                                        <div class="t-col t-xs-6">We will fill our parent...</div>
+                                    </div>
+                                    <div class="t-row">
+                                        <div class="t-col t-xs-6">...with love and space!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="t-col t-sm-6">
+                                Yep,<br/>
+                                I<br/>
+                                am<br/>
+                                still<br/>
+                                tall.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- t-grid code 3.1 ends here -->
+
+                </div>
+                <div class="columns large-6">
+                    <div class="os-window spacer-top">
+                        <div class="header gradient-blue">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="content">
+                            <pre><code>&lt;<span class="tag">script <span class="attr">src=&quot;<span class="attr-val">jQuery.js</span>&quot;</span></span>&gt;&lt;/<span class="tag">script</span>&gt;
+&lt;<span class="tag">script <span class="attr">src=&quot;<span class="attr-val">t-grid.js</span>&quot;</span></span>&gt;&lt;/<span class="tag">script</span>&gt;
+
+&lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid t-break-sm</span>&quot;</span></span>&gt;
+    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-sm-6</span>&quot;</span></span>&gt;
+            &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid t-break-sm t-fill</span>&quot;</span></span>&gt;
+                &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+                    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xs-6</span>&quot;</span></span>&gt;
+                        We will fill our parent...
+                    &lt;/<span class="tag">div</span>&gt;
+                &lt;/<span class="tag">div</span>&gt;
+                &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+                    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xs-6</span>&quot;</span></span>&gt;
+                        ...with love and space!
+                    &lt;/<span class="tag">div</span>&gt;
+                &lt;/<span class="tag">div</span>&gt;
+            &lt;/<span class="tag">div</span>&gt;
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-sm-6</span>&quot;</span></span>&gt;
+            Yep,&lt;<span class="tag">br/</span>&gt;
+            I&lt;<span class="tag">br/</span>&gt;
+            am&lt;<span class="tag">br/</span>&gt;
+            still&lt;<span class="tag">br/</span>&gt;
+            tall
+        &lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;
+
+&lt;<span class="tag">script</span></span></span>&gt;<span class="js">var tGrid = new tGrid();</span>&lt;/<span class="tag">script</span>&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+    </div>
+
+    <footer class="row">
+        <div class="columns">
+            <a href="3-alignment.html" class="fancy-button ">
+                <i class="material-icons">&#xE314;</i>
+                Back
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        var tGrid = new tGrid();
+    </script>
+
+</body>
+
+</html>

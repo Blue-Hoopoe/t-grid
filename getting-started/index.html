@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>t-grid | demo</title>
+    <link rel="icon" href="resources/logo_256.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-float.css">
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+</head>
+
+<body>
+
+    <header class="gradient-blue">
+        <div class="row text-center">
+            <h1 class="columns small-12  space-bottom-small">
+                <a href="https://github.com/Blue-Hoopoe" target="_blank">
+                    <img draggable="false" class="logo-large" style="margin-top: -10px" src="resources/logo-transparent.svg" alt="Blue-Hoopoe"
+                    />
+                </a>
+                <span>t-grid</span>
+            </h1>
+            <h2 class="h5 columns medium-offset-3 medium-6 small-12 space-bottom-medium">
+                When floats are not enought and css-grid along with flex-box are not even an option.
+            </h2>
+            <div class="columns small-12">
+                <a href="https://github.com/Blue-Hoopoe/t-grid" target="_blank" class="fancy-button">
+                    <i class="material-icons">&#xE86F;</i>
+                    Github
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="row">
+        <section class="columns medium-12 large-6" id="why-and-when-use-t-grid">
+            <header>
+                <h3>Why and when use t-grid?</h3>
+            </header>
+            <div class="large-text-justify">
+                <p>I have created the t-grid as a result of <span class="attr-val">compromise between old browsers support and responsive design</span>. I
+                    was definitely tired of worrying about how Internet Explorer would render my flex-box grid and how could
+                    I fix this.</p>
+                <p>Fortunately for me and you, there is one display property that we can use for our advantage: tables. They sometimes
+                    can behave like a flexboxes and they can be a little bit more adjustable then standard divs.</p>
+                <p>I truly believe that t-grid can be a nice consensus between design and usability in some cases. Just be sure that you know its potential and its wrinkles. <span class="accent">It is not suitable for all situations.</span> Hovewer, it is still worth considering.</p>
+            </div>
+        </section>
+        <section class="columns medium-12 large-6" id="pros-and-cons">
+            <header>
+                <h3><span class="attr-val">Pros</span> and <span class="accent">cons</span></h3>
+            </header>
+            <div class="medium-text-justify">
+                <p>Below I present you some of my favorite advantages of using t-grid:</p>
+                <ul>
+                    <li>Tables are really widely supported.</li>
+                    <li>Because of a sass source you can easly customize your grid.</li>
+                    <li>You can create contained, nested tables.</li>
+                    <li>In contrast to standard floated grid, columns can automatically shrink depending on their content.</li>
+                    <li>They are perfect for filled grid layouts with no extra space beetwen.</li>
+                </ul>
+                <p>But there are two sides to every story:</p>
+                <ul>
+                    <li>Rows can't be wrapped as long as they are displaying as a table.</li>
+                    <li>You can face some padding/margin problems.</li>
+                    <li>Nested tables can lead to some unwanted effects, so it's recommended to mix table and float grids.</li>
+                    <li>To create nested tables you must provide jQuery.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div class="row">
+        <section class="columns medium-6" id="say-hello-to-t-grid">
+            <header>
+                <h3>Say hello to t-grid</h3>
+            </header>
+            <div class="row">
+                <div class="large-text-justify columns small-12">
+                    <p>I have created for you a tutorial in this very folder which includes five lessons to help you begin. </p>
+                    <p>To get started, you just need to have overall concept how float grids work, because t-grid is very similar. In t-grid there are by default five breakpoints to use and twelve columns to your service:</p>
+                    <ul>
+                        <li><span class="tag">xxs</span> - 360px,</li>
+                        <li><span class="json">xs</span> - 576px,</li>
+                        <li><span class="attr-val">sm</span> - 768px,</li>
+                        <li><span class="attr">md</span> - 992px,</li>
+                        <li><span class="js">lg</span> - 1200px.</li>
+                    </ul>
+                    <p>The great thing is that you can easily adapt this numbers for your needs! Just change some variables in <span class="accent">source/sass/_variables.scss</span> file and compile the grid.</p>
+                </div>
+            </div>
+        </section>
+        <section class="columns medium-6" id="demo-tutorial">
+                <header>
+                    <h3>Check out demo-tutorial!</h3>
+                </header>
+                <div class="row">
+                    <div class="large-text-justify columns small-12">
+                        <p>While examining demos I highly recommend you to look inside a demo code to understand how it really works. All lessons are stored in <span class="accent">getting-started/demos</span> folder. Good luck!</p>
+                        <ol>
+                            <li>
+                                <a href="demos/1-getting-started.html">Getting started</a>
+                                <ul>
+                                    <li>Simple one third grid</li>
+                                    <li>Auto columns sizes</li>
+                                    <li>Different column sizes at different breakpoints</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="demos/2-grid-breakpoints.html">Grid breakpoints</a>
+                                <ul>
+                                    <li>Grid wrap</li>
+                                    <li>Floats on collapse</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="demos/3-alignment.html">Alignment</a>
+                                <ul>
+                                    <li>Grids alignment</li>
+                                    <li>Single cells alignment</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="demos/4-nesting.html">Nesting</a>
+                                <ul>
+                                    <li>Nesting without filling</li>
+                                    <li>Filled nesting</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>t-grid | 2. Grid breakpoints</title>
+    <link rel="icon" href="../resources/logo_256.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-float.css">
+    <link rel="stylesheet" type="text/css" href="../resources/style.css">
+    <link rel="stylesheet" type="text/css" href="../resources/grids.css">
+    <link rel="stylesheet" type="text/css" href="../../t-grid.css">
+</head>
+
+<body>
+
+    <header class="gradient-blue">
+        <div class="row text-center">
+            <h3 class="columns small-12  space-bottom-small">
+                <a href="https://github.com/Blue-Hoopoe" target="_blank">
+                    <img draggable="false" class="logo-large" style="margin-top: -10px" src="../resources/logo-transparent.svg" alt="Blue-Hoopoe">
+                </a>
+                <span>2. Grid breakpoints</span>
+            </h3>
+        </div>
+    </header>
+
+    <div class="row">
+        <section class="columns small-12">
+            <header>
+                <h3>2.1 Grid wrap</h3>
+            </header>
+            <div class="row">
+                <div class="columns large-text-justify">
+                    <p>Unfortunately, t-grid can't wrap when it is displaying as a table. To collapse grid on certain breakpoint, you must add <span class="attr-val">t-break-{breakpoint}</span> class to your grid.</p>
+                </div>
+                <div class="columns large-6 text-center">
+
+                    <!-- t-grid code 2.1 starts here -->
+
+                    <div class="t-grid t-break-sm">
+                        <div class="t-row">
+                            <div class="t-col t-xxs-12">
+                                We relay on our grid!
+                            </div>
+                            <div class="t-col t-xxs-12">
+                                We can't wrap by ourselves :(
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- t-grid code 2.1 ends here -->
+
+                </div>
+                <div class="columns large-6">
+                    <div class="os-window spacer-top">
+                        <div class="header gradient-blue">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="content">
+                            <pre><code>&lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid t-break-sm</span>&quot;</span></span>&gt;
+    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xxs-12</span>&quot;</span></span>&gt;
+            We relay on our grid!
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xxs-12</span>&quot;</span></span>&gt;
+            We can't wrap by ourselves :(
+        &lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header>
+                <h3>2.2 Floats on collapse</h3>
+            </header>
+            <div class="row">
+                <div class="columns large-text-justify">
+                    <p>When grid is collapsed, it is displaying as a blocks with left floats, just like in a float-grids.</p>
+                </div>
+                <div class="columns large-6 text-center">
+
+                    <!-- t-grid code 2.1 starts here -->
+
+                    <div class="t-grid t-break-sm">
+                        <div class="t-row">
+                            <div class="t-col t-xxs-6 t-sm-4">
+                                We are the table!
+                            </div>
+                            <div class="t-col t-xxs-6 t-sm-4">
+                                But only to certain point.
+                            </div>
+                            <div class="t-col t-xxs-12 t-sm-4">
+                                Because then w evolve to blocks!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- t-grid code 2.1 ends here -->
+
+                </div>
+                <div class="columns large-6">
+                    <div class="os-window spacer-top">
+                        <div class="header gradient-blue">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="content">
+                            <pre><code>&lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-grid t-break-sm</span>&quot;</span></span>&gt;
+    &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-row</span>&quot;</span></span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xxs-6 t-sm-4</span>&quot;</span></span>&gt;
+            We are the table!
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xxs-6 t-sm-4</span>&quot;</span></span>&gt;
+            But only to certain point.
+        &lt;/<span class="tag">div</span>&gt;
+        &lt;<span class="tag">div <span class="attr">class=&quot;<span class="attr-val">t-col t-xxs-12 t-sm-4</span>&quot;</span></span>&gt;
+            Because then w evolve to blocks!
+        &lt;/<span class="tag">div</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </div>
+
+    <footer class="row">
+        <div class="columns">
+            <a href="1-getting-started.html" class="fancy-button ">
+                <i class="material-icons">&#xE314;</i>
+                Back
+            </a>
+            <a href="3-alignment.html" class="fancy-button float-right">
+                <i class="material-icons">&#xE315;</i>
+                Next
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

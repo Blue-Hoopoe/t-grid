@@ -1,0 +1,81 @@
+// Importing variables stored in _variables.scss file
+@import 'variables';
+
+// Grid component logic starts from here
+.t-grid {
+    display: table;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.t-row {
+    display: table-row;
+    height: 1px;
+}
+
+.t-col {
+    vertical-align: middle;
+    display: table-cell;
+    width: auto;
+}
+
+// Vertical alignment
+$v-aligments: ('top', 'middle', 'bottom');
+@each $alignment in $v-aligments {
+    .t-grid.t-#{$alignment}>.t-row>.t-col,
+    .t-grid.t-#{$alignment}>.t-col,
+    .t-col.t-#{$alignment} {
+        vertical-align: #{$alignment};
+    }
+}
+
+// Breakpoints logic
+@each $breakpoint in $breakpoints {
+    .t-grid.t-break-#{nth($breakpoint, 1)} {
+        @media (max-width: #{nth($breakpoint, 2) - 1px }) {
+            & > .t-col, 
+            & > .t-row > .t-col {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+                float: left;
+            }
+
+            & > .t-row{
+                display: block!important;
+                height: 0!important;
+            }
+
+            .t-row::after{
+                display: block;
+                content: '';
+                clear: both;
+            }
+            
+            &{
+                height: auto!important;
+            }
+        }
+    }
+}
+
+// Column sizes logic
+$i: 1;
+@each $breakpoint in $breakpoints {
+    $width: #{nth($breakpoint, 2) * 1px};
+    @if ($i == 1){
+        $width: 0;
+    }
+    @media (min-width: $width) {
+        @for $size from 1 through $columns-number{
+            .t-col.t-#{nth($breakpoint, 1)}-#{$size}{
+                width: 100%*$size/$columns-number!important;
+            }
+        }
+        .t-col.t-#{nth($breakpoint, 1)}-auto{
+            width: auto;
+        }
+    }
+    $i: 1 + $i;
+}
